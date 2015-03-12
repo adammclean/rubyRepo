@@ -1,11 +1,28 @@
 #ENUMERABLE
 
 
+class Colors
+  >>   include Enumerable
+
+  >>   def each
+    >>     yield "red"
+    >>     yield "green"
+    >>     yield "blue"
+    >>   end
+  >> end
+
+>> c = Colors.new
+>> c.map { |i| i.reverse }
+=> ["der", "neerg", "eulb"]
+
+
+
 #**TODO ENTER CODE**
 # * Output all the methods of the Enumerable class to the console
 
-
-
+[:all?, :any?, :chunk, :collect, :collect_concat, :count, :cycle, :detect, :drop, :drop_while, :each_cons, :each_entry, :each_slice, :each_with_index, :each_with_object, :entries, :find,
+ :find_all, :find_index, :first, :flat_map, :grep, :group_by, :include?, :inject, :lazy, :map, :max, :max_by, :member?, :min, :min_by, :minmax, :minmax_by, :none?, :one?, :partition,
+ :reduce, :reject, :reverse_each, :select, :slice_before, :sort, :sort_by, :take, :take_while, :to_a, :to_h, :zip]
 
 
 
@@ -15,10 +32,17 @@
 #   This means that the class you create...say Person... will respond to Person.each.
 # * use a normal each loop to iterate over the class and output the names to the console.
 class Person
-  def initialize
-    @person=Person
-  end
+  include Enumerable
+
+    def each
+        yield "Dan"
+        yield "Josh"
+        yield "Adam"
+    end
 end
+
+p = Person.new
+p.map { |i| puts i }
 
 
 
