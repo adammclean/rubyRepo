@@ -40,6 +40,7 @@ names.map! {|name| name.upcase}
 ##Explain in words
 # TODO Why does result equal what it does?
 =begin
+Map takes the object and block - and runs the block for each element.
 =end
 array = [1,2,3,4,5]
 result = array.map {|n| puts n * 100 }

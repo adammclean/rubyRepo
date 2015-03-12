@@ -72,10 +72,12 @@ end
 
 ##Write a method that outputs the value of the self keyword to the console
 
-
-def self
-  @self=self
-end
+ class Dude
+   attr_accessor :surboards
+    def initialize(surfboards)
+      self.surfboards = surfboards
+   end
+ end
 
 
 
