@@ -14,6 +14,11 @@
 #   define some names, the each method will allow you to iterate over these
 #   This means that the class you create...say Person... will respond to Person.each.
 # * use a normal each loop to iterate over the class and output the names to the console.
+class Person
+  def initialize
+    @person=Person
+  end
+end
 
 
 
