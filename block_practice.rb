@@ -1,20 +1,6 @@
 #ENUMERABLE
 
 
-class Colors
-  >>   include Enumerable
-
-  >>   def each
-    >>     yield "red"
-    >>     yield "green"
-    >>     yield "blue"
-    >>   end
-  >> end
-
->> c = Colors.new
->> c.map { |i| i.reverse }
-=> ["der", "neerg", "eulb"]
-
 
 
 #**TODO ENTER CODE**
@@ -43,9 +29,6 @@ end
 
 p = Person.new
 p.map { |i| puts i }
-
-
-
 
 
 
